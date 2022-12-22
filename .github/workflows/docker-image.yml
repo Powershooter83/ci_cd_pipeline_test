@@ -16,5 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
+      - name: Run tests
+        run: yarn test
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
