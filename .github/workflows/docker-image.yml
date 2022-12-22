@@ -20,4 +20,5 @@ jobs:
       - run: npm test
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag frontend-latest
-      - run: docker push powershooter83/ci-cd-test-pipeline
+      - name: docker push
+        run: docker push powershooter83/ci-cd-test-pipeline
